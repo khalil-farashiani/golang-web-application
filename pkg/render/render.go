@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"fmt"
 	"github.com/khalil-farashiani/golang-web-application/pkg/config"
+	"github.com/khalil-farashiani/golang-web-application/pkg/models"
 	"html/template"
 	"log"
 	"net/http"
@@ -18,8 +19,12 @@ func NewTemplate(a *config.AppConfig) {
 	app = a
 }
 
+func AddDefaultData(td *models.TemplateData) *models.TemplateData {
+	return td
+}
+
 //RenderTemplates render template function
-func RenderTemplates(w http.ResponseWriter, tmpl string) {
+func RenderTemplates(w http.ResponseWriter, tmpl string, td *models.TemplateData) {
 	var tc = map[string]*template.Template{}
 	if app.UseCache {
 		tc = app.TemplateCache
@@ -34,7 +39,9 @@ func RenderTemplates(w http.ResponseWriter, tmpl string) {
 	}
 
 	buf := new(bytes.Buffer)
-	_ = t.Execute(buf, nil)
+
+	td = AddDefaultData(td)
+	_ = t.Execute(buf, td)
 
 	_, err := buf.WriteTo(w)
 	if err != nil {
