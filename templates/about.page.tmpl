@@ -6,6 +6,12 @@
             <div class="col">
                 <h1>this is about page welcome</h1>
                 <p>some text here</p>
+                {{if ne (index .StringMap "remote_IP") ""}}
+                    <p>this is your IP: {{index .StringMap "remote_IP"}}</p>
+                {{else}}
+                    <p>I don't know ypur IP address</p>
+                {{end}}
+            </div>
             </div>
         </div>
     </div>
