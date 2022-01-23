@@ -1,138 +1,132 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-          name="viewport">
-    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <!doctype html>
+    <html lang="en">
 
-    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
 
-    <title>Home</title>
+        <title>My Nice Page</title>
 
-    <style>
-        .my-footer{
-            margin-top: 1em;
-            padding: 1.5em;
-            background-color: midnightblue;
-            color: azure;
-            text-align: center;
-        }
-        .my-title{
-            padding: 1em;
-        }
-    </style>
-</head>
-<body>
+        <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+              integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.2/dist/css/datepicker-bs4.min.css"
+              rel="stylesheet">
+        <link href="https://unpkg.com/notie/dist/notie.min.css" rel="stylesheet" type="text/css">
+        <link href="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.min.css" rel="stylesheet">
+        <link href="../static/css/styles.css" rel="stylesheet" type="text/css">
+    </head>
 
+    <body>
+    
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-                class="navbar-toggler" data-bs-target="#navbarSupportedContent"
-                data-bs-toggle="collapse" type="button">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a aria-current="page" class="nav-link active" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
-                       id="navbarDropdown" role="button">
-                        Rooms
-                    </a>
-                    <ul aria-labelledby="navbarDropdown" class="dropdown-menu">
-                        <li><a class="dropdown-item" href="generals.html">general's Quarters</a></li>
-                        <li><a class="dropdown-item" href="majors.html">Major's Suite</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="reservation.html">Book Now</a>
-                </li>
-            </ul>
-
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarNav" data-toggle="collapse" type="button">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">About</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdownMenuLink" role="button">
+          Rooms
+        </a>
+        <div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
+          <a class="dropdown-item" href="generals.html">General's Quarters</a>
+          <a class="dropdown-item" href="majors.html">Major's Suite</a>
         </div>
-    </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="reservation.html">Book Now</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">Contact</a>
+      </li>
+      
+    </ul>
+  </div>
 </nav>
-<div class="container">
-    <div class="row">
-        <div class="col">
 
-            <h1>Make a reservation</h1>
 
-            <form action="" class="needs-validation" method="post" novalidate>
+    
 
-                <div class="form-group mt-5">
-                    <label for="first_name">First Name:</label>
-                    <input autocomplete="off" class="form-control" id="first_name" name="first_name" required
-                           type="text">
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="mt-3">Make Reservation</h1>
 
-                <div class="form-group mt-5">
-                    <label for="last_name">Last Name:</label>
-                    <input autocomplete="off" class="form-control" id="last_name" name="last_name" required type="text">
-                </div>
+                <form action="" class="needs-validation" method="post" novalidate>
 
-                <div class="form-group mt-5">
-                    <label for="email">Email:</label>
-                    <input autocomplete="off" class="form-control" id="email" name="email" required type="email">
-                </div>
+                    <div class="form-group mt-3">
+                        <label for="first_name">First Name:</label>
+                        <input autocomplete="off"
+                               class="form-control" id="first_name" name='first_name'
+                               required type='text' value="">
+                    </div>
 
-                <div class="form-group mt-5">
-                    <label for="phone">Phone:</label>
-                    <input autocomplete="off" class="form-control" id="phone" name="phone" required type="text">
-                </div>
+                    <div class="form-group">
+                        <label for="last_name">Last Name:</label>
+                        <input autocomplete="off"
+                               class="form-control" id="last_name" name='last_name'
+                               required type='text' value="">
+                    </div>
 
-                <hr>
-                <input class="btn btn-primary" type="submit" value="Make reservation">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input autocomplete="off" class="form-control"
+                               id="email" name='email'
+                               required type='email' value="">
+                    </div>
 
-            </form>
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input autocomplete="off" class="form-control"
+                               id="phone" name='phone'
+                               required type='email' value="">
+                    </div>
 
+                    <hr>
+                    <input class="btn btn-primary" type="submit" value="Make Reservation">
+                </form>
+        
+           
+            </div>
         </div>
+
+
+
     </div>
 
-    <div class="row">
-        <div class="col">
-            <h1>
-                Hello world!!
-            </h1>
-        </div>
-        <div class="col">
-            <h1>
-                Hello world!!
-            </h1>
-        </div>
-        <div class="col">
-            <h1>
-                Hello world!!
-            </h1>
-        </div>
 
-    </div>
-    </div>
-    <div class="row my-footer">
-        <div class="col">
-            left
+    <footer class="my-footer">
+        <div class="row">
+            <div class="col">
+                left
+            </div>
+
+            <div class="col">
+                center
+            </div>
+
+            <div class="col">
+                right
+            </div>
         </div>
-        <div class="col">
-            middle
-        </div>
-        <div class="col">
-            right
-        </div>
-    </div>
-    <script crossorigin="anonymous" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
-</body>
-</html>
+    </footer>
+
+    <script crossorigin="anonymous"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script crossorigin="anonymous"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    </body>
+
+    </html>
