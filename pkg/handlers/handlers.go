@@ -1,6 +1,7 @@
 package handlers
 
 import (
+	"fmt"
 	"github.com/khalil-farashiani/golang-web-application/pkg/config"
 	"github.com/khalil-farashiani/golang-web-application/pkg/models"
 	"github.com/khalil-farashiani/golang-web-application/pkg/render"
@@ -71,6 +72,8 @@ func (m *Repository) Availability(w http.ResponseWriter, r *http.Request) {
 
 // PostAvailability renders the search-availability page
 func (m *Repository) PostAvailability(w http.ResponseWriter, r *http.Request) {
-
+	start := r.Form.Get("start")
+	end := r.Form.Get("end")
+	w.Write([]byte(fmt.Sprintf("from %s to %s", start, end)))
 	render.RenderTemplates(w, r, "search-availability.page.tmpl", &models.TemplateData{})
 }
