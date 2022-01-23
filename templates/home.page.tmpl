@@ -1,12 +1,68 @@
 {{template "base" .}}
 
 {{define "content"}}
+    <div class="carousel slide" data-ride="carousel" id="main-carousel">
+
+        <ol class="carousel-indicators">
+            <li class="active" data-slide-to="0" data-target="#main-carousel"></li>
+            <li data-slide-to="1" data-target="#main-carousel"></li>
+            <li data-slide-to="2" data-target="#main-carousel"></li>
+        </ol>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img alt="Woman and laptop" class="d-block w-100" src="/static/images/woman-laptop.png">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img alt="Tray with coffee" class="d-block w-100" src="/static/images/tray.png">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img alt="Outside" class="d-block w-100" src="/static/images/outside.png">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col">
-                <h1>this is home page welcome</h1>
-                <p>some text here</p>
+                <h1 class="text-center mt-4">Welcome to Fort Smythe Bed and Breakfast</h1>
+                <p>
+                    Your home away form home, set on the majestic waters of the Atlantic Ocean, this will be a vacation
+                    to remember.
+                    Your home away form home, set on the majestic waters of the Atlantic Ocean, this will be a vacation
+                    to remember.
+                    Your home away form home, set on the majestic waters of the Atlantic Ocean, this will be a vacation
+                    to remember.
+                    Your home away form home, set on the majestic waters of the Atlantic Ocean, this will be a vacation
+                    to remember.
+                    Your home away form home, set on the majestic waters of the Atlantic Ocean, this will be a vacation
+                    to remember.
+                    Your home away form home, set on the majestic waters of the Atlantic Ocean, this will be a vacation
+                    to remember.
+                </p>
             </div>
         </div>
+
+
+        <div class="row">
+
+            <div class="col text-center">
+
+                <a class="btn btn-success" href="/search-availability">Make Reservation Now</a>
+
+            </div>
+        </div>
+
     </div>
 {{end}}
