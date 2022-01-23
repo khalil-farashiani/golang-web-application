@@ -70,7 +70,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/reservation">Book Now</a>
+                    <a class="nav-link" href="/search-availability">Book Now</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/contact">Contact</a>
@@ -132,34 +132,7 @@
             }, false);
         })();
 
-        document.getElementById("colorButton").addEventListener("click", function () {
-            let html = `
-        <form id="check-availability-form" action="" method="post" novalidate class="needs-validation">
-            <div class="form-row">
-                <div class="col">
-                    <div class="form-row" id="reservation-dates-modal">
-                        <div class="col">
-                            <input disabled required class="form-control" type="text" name="start" id="start" placeholder="Arrival">
-                        </div>
-                        <div class="col">
-                            <input disabled required class="form-control" type="text" name="end" id="end" placeholder="Departure">
-                        </div>
 
-                    </div>
-                </div>
-            </div>
-        </form>
-        `;
-            attention.custom({
-                title: 'Choose your dates',
-                msg: html,
-            });
-        })
-
-        const elem = document.getElementById('reservation-dates');
-        const rangePicker = new DateRangePicker(elem, {
-            format: "yyyy-mm-dd",
-        });
 
         function notify(msg, msgType) {
             notie.alert({
