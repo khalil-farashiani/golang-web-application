@@ -1,10 +1,12 @@
 package handlers
 
 import (
+	"encoding/json"
 	"fmt"
 	"github.com/khalil-farashiani/golang-web-application/pkg/config"
 	"github.com/khalil-farashiani/golang-web-application/pkg/models"
 	"github.com/khalil-farashiani/golang-web-application/pkg/render"
+	"log"
 	"net/http"
 )
 
@@ -68,6 +70,30 @@ func (m *Repository) Contact(w http.ResponseWriter, r *http.Request) {
 func (m *Repository) Availability(w http.ResponseWriter, r *http.Request) {
 
 	render.RenderTemplates(w, r, "search-availability.page.tmpl", &models.TemplateData{})
+}
+
+type jsonResponse struct {
+	OK      bool   `json:"ok"`
+	Massege string `json:"massege"`
+}
+
+// AvailabilityJSON handles request for availability and send JSON response
+func (m *Repository) AvailabilityJSON(w http.ResponseWriter, r *http.Request) {
+	resp := jsonResponse{
+		OK:      true,
+		Massege: "Available!",
+	}
+
+	json, err := json.MarshalIndent(resp, "", "     ")
+
+	if err != nil {
+		log.Println(err)
+	}
+
+	log.Println(string(json))
+
+	w.Header().Set("Content-Type", "Application/json")
+	w.Write(json)
 }
 
 // PostAvailability renders the search-availability page
