@@ -3,9 +3,9 @@ package handlers
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/khalil-farashiani/golang-web-application/pkg/config"
-	"github.com/khalil-farashiani/golang-web-application/pkg/models"
-	"github.com/khalil-farashiani/golang-web-application/pkg/render"
+	"github.com/khalil-farashiani/golang-web-application/internal/config"
+	"github.com/khalil-farashiani/golang-web-application/internal/models"
+	"github.com/khalil-farashiani/golang-web-application/internal/render"
 	"log"
 	"net/http"
 )

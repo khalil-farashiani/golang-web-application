@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 	"github.com/alexedwards/scs/v2"
-	"github.com/khalil-farashiani/golang-web-application/pkg/config"
-	"github.com/khalil-farashiani/golang-web-application/pkg/handlers"
-	"github.com/khalil-farashiani/golang-web-application/pkg/render"
+	"github.com/khalil-farashiani/golang-web-application/internal/config"
+	"github.com/khalil-farashiani/golang-web-application/internal/handlers"
+	"github.com/khalil-farashiani/golang-web-application/internal/render"
 	"log"
 	"net/http"
 	"time"

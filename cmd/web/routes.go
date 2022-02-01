@@ -3,8 +3,8 @@ package main
 import (
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
-	"github.com/khalil-farashiani/golang-web-application/pkg/config"
-	"github.com/khalil-farashiani/golang-web-application/pkg/handlers"
+	"github.com/khalil-farashiani/golang-web-application/internal/config"
+	"github.com/khalil-farashiani/golang-web-application/internal/handlers"
 	"net/http"
 )
 
