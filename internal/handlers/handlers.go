@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/khalil-farashiani/golang-web-application/internal/config"
+	"github.com/khalil-farashiani/golang-web-application/internal/forms"
 	"github.com/khalil-farashiani/golang-web-application/internal/models"
 	"github.com/khalil-farashiani/golang-web-application/internal/render"
 	"log"
@@ -62,8 +63,20 @@ func (m *Repository) Majors(w http.ResponseWriter, r *http.Request) {
 
 // Contact renders the room page
 func (m *Repository) Contact(w http.ResponseWriter, r *http.Request) {
-
 	render.RenderTemplates(w, r, "contact.page.tmpl", &models.TemplateData{})
+}
+
+//MakeReservation renders the make-reservation page
+func (m *Repository) MakeReservation(w http.ResponseWriter, r *http.Request) {
+
+	render.RenderTemplates(w, r, "make-reservation.page.tmpl", &models.TemplateData{
+		Form: forms.New(nil),
+	})
+}
+
+//PostReservation handles the posting a reservation form
+func (m *Repository) PostReservation(w http.ResponseWriter, r *http.Request) {
+
 }
 
 // Availability renders the search-availability page
