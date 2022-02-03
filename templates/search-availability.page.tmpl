@@ -1,7 +1,6 @@
 {{template "base" .}}
 
 {{define "content"}}
-
     <div class="container">
         <div class="row">
             <div class="col-md-3"></div>
@@ -33,14 +32,15 @@
         </div>
 
     </div>
-
 {{end}}
+
 
 {{define "js"}}
-    <script>
-        const elem = document.getElementById('reservation-dates');
-        const rangePicker = new DateRangePicker(elem, {
-            format: "yyyy-mm-dd",
-        });
-    </script>
+<script>
+    const elem = document.getElementById('reservation-dates');
+    const rangePicker = new DateRangePicker(elem, {
+        format: "yyyy-mm-dd",
+    });
+</script>
 {{end}}
+
