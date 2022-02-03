@@ -1,11 +1,3 @@
-first web application project with go
-
-
-- Built in Golang
-- Uses the [chi router](github.com/go-chi/chi)
-- Uses [alex edwards scs session management](github.com/alexedwards/scs)
-- Uses [nosurf](github.com/justinas/nosurf)
-
 <h1 align="center">web application project with golang (net/http) 👋</h1>
 <p>
   <a href="#" target="_blank">
@@ -14,6 +6,11 @@ first web application project with go
 </p>
 
 > this is a web application using golang and standard library (net/http) for booking and make a reservation for a room
+
+- Built in Golang
+- Uses the [chi router](github.com/go-chi/chi)
+- Uses [alex edwards scs session management](github.com/alexedwards/scs)
+- Uses [nosurf](github.com/justinas/nosurf)
 
 ## usage
 install golang from go.dev
