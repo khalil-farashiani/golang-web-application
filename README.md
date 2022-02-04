@@ -12,11 +12,6 @@
 - Uses [alex edwards scs session management](github.com/alexedwards/scs)
 - Uses [nosurf](github.com/justinas/nosurf)
 
-## usage
-install golang from go.dev
-
-clone the project and run it by go run cmd/web/*.go to compile and run
-
 ## Author
 
 👤 **khalil farashiani**
